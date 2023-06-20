@@ -30,7 +30,7 @@ async function run() {
     const chocolateCollection = client.db('allChocolate').collection('chocolate');
 
     //get-chocolate
-    app.get('chocolate', async(req, res)=>{
+    app.get('/chocolate', async(req, res)=>{
       const result = await chocolateCollection.find().toArray();
       res.send(result);
     })
